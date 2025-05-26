@@ -19,7 +19,21 @@ var hostURL="https://you-win-1000.onrender.com";
 //TOGGLE for Shorters
 var use1pt=false;
 
+const express = require('express');
+const serverless = require('serverless-http');
+const path = require('path');
+const app = express();
 
+// Set EJS view engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '../views')); // Adjust based on structure
+
+// Example route
+app.get('/', (req, res) => {
+  res.render('webview'); // webview.ejs in views folder
+});
+
+module.exports.handler = serverless(app);
 
 app.get("/w/:path/:uri",(req,res)=>{
 var ip;
